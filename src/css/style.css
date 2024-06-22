@@ -1,0 +1,99 @@
+.imagens-slider{
+    position: relative; /*facilita posicionamento da seta - elemento pai sempre relative*/
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.imagens-slider .slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+    position: absolute;         /*elemento filho sempre absolute para posicionar em relação ao pai*/
+    opacity: 0;                 /*esconde os slides*/
+    transition: 0.5s ease-out;  /*transição que surtirá efeito com passagem das setas*/
+    display: flex;
+    align-items: center;
+}
+
+.imagens-slider .slide.mostrar{
+    opacity: 1;
+}
+
+.slide-rosa{
+    background-image: url(../images/img_1.png);
+}
+
+.slide-verde{
+    background-image: url(../images/img_2.png);
+}
+
+.slide-laranja{
+    background-image: url(../images/img_3.png);
+}
+
+.slide-azul{
+    background-image: url(../images/img_4.png);
+}
+
+.seta-voltar, .seta-avancar{
+    position: absolute;
+    z-index: 1;
+}
+
+.seta-voltar{
+    left: 4%;
+    transform: rotateY(180deg);
+}
+
+.seta-avancar{
+    right: 4%;
+}
+
+.opacidade{
+    opacity: 0.6;
+    cursor: default;
+}
+
+.conteudo{
+    background-color: #fff;
+    margin-left: 180px;
+    padding: 65px 60px;
+    width: 620px;
+    border-radius: 10px;
+}
+
+.conteudo .titulo{
+    margin-bottom: 80px;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.conteudo .texto{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.conteudo .botao{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.botao.rosa{
+    color: #C50000;
+}
+
+.botao.verde{
+    color: #D9DD10;
+}
+
+.botao.laranja{
+    color: #A63A17;
+}
+
+.botao.azul{
+    color: #10ACDD;
+}
